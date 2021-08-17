@@ -13,7 +13,7 @@ enem = (
     .option("header", True)
     .option("inferSchema", True)
     .option("delimiter", "|")
-    .load("s3://datalake-rafacferrez/raw-data/DADOS/matriculas_co/")
+    .load("s3://datalake-rafacferrez/raw-data/DADOS/matricula_norte/")
 )
 
 # Escrevendo os dados
@@ -21,5 +21,5 @@ enem = (
     enem
     .write
     .mode("overwrite")
-    .parquet("s3://datalake-rafacferrez/staging/DADOS/matriculas_co/")
+    .parquet("s3://datalake-rafacferrez/staging/DADOS/matricula_norte/")
 )
